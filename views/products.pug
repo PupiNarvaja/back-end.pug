@@ -3,7 +3,7 @@ html
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible" content="IE=edge")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        //- title(This | Dress well)
+        title(This | Dress well)
         link(rel="stylesheet" href="/static/css/styles.css")
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
@@ -15,8 +15,16 @@ html
                 ul
                     a(href="/")
                         li Home
+                    a(href="/add")
+                        li Add new product
         h1 Welcome to This
-    div(id="app")
-       h3 The #{product} has been successfully added.
+            div(id="app")
+                ul
+                    each prod in products 
+                        img(src=prod.thumbnail width=200)
+                        div= prod.name
+                        div= prod.price
+                    else
+                        li no hay datos en la lista
     body
 html

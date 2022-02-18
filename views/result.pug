@@ -13,18 +13,10 @@ html
         header(class="w-full bg-gray-300 h-40 header")
             nav
                 ul
-                    a(href="/pug")
-                        li Products
-                    a(href="/pug/add")
-                        li Add new product
+                    a(href="/")
+                        li Home
         h1 Welcome to This
     div(id="app")
-        ul
-            each product in products 
-                img(src=product.thumbnail)
-                div= product.name
-                div= product.price
-            else
-                li no hay datos en la lista
+       h3 The #{product} has been successfully added.
     body
 html

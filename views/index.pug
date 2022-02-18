@@ -13,4 +13,18 @@ html
         header(class="w-full bg-gray-300 h-40 header")
             nav
                 ul
-                    block content
+                    a(href="/products")
+                        li Products
+                    a(href="/add")
+                        li Add new product
+h1 Welcome to This
+    div(id="app")
+        ul
+            //- each product in products 
+            //-     img(src=product.thumbnail)
+            //-     div= product.name
+            //-     div= product.price
+            //- else
+                li no hay datos en la lista
+    body
+html

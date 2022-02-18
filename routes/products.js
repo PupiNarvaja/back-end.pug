@@ -20,7 +20,7 @@ const getProduct = () => {
 
 //GET products
 router.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/products.html"));
+    res.render("products", { products: products });
 });
 
 //GET products
@@ -72,6 +72,5 @@ router.delete("/:id", (req, res) => {
 
     res.sendStatus(200);
 });
-
 
 module.exports = router;
